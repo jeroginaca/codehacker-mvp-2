@@ -4,7 +4,7 @@ import ResourceCard from "@/components/component/ResourceCard";
 import { SearchForm } from "@/components/component/SearchForm";
 import { getResources, getResourcesPlaylist } from "@/sanity/actions";
 
-export const revalidate = 900
+export const revalidate = 30
 
 interface Props {
   searchParams: { [key: string]: string | undefined }
@@ -52,7 +52,7 @@ export default async function Home({ searchParams }: Props) {
                 />
               ))
             ) : (
-              <p className="body-regultar text-white-400">
+              <p className="body-regular text-white-400">
                 No resources found
               </p>
             )}

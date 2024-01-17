@@ -12,6 +12,8 @@ async function getData(slug: string) {
   return data;
 }
 
+export const revalidate = 30 // Para que actualize solo.
+
 export default async function SlugPage({
   params,
 }: {
